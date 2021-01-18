@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "ng-pi-mile"
+  "defaultProject": "ng-pi-mile",
+  "cli": {
+    "analytics": "fbc3ec7c-ce32-4155-9127-fd7000d3706d"
+  }
 }
