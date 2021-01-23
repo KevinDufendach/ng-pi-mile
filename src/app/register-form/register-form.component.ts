@@ -9,10 +9,6 @@ import { states } from './states';
 })
 export class RegisterFormComponent {
   registrationForm = this.fb.group({
-    company: null,
-    // firstName: [null, Validators.required],
-    // lastName: [null, Validators.required],
-
     participants: this.fb.array([ this.createParticipant() ]),
 
     address: [null, Validators.required],
@@ -21,8 +17,7 @@ export class RegisterFormComponent {
     state: [null, Validators.required],
     postalCode: [null, Validators.compose([
       Validators.required, Validators.minLength(5), Validators.maxLength(5)])
-    ],
-    shipping: ['free', Validators.required]
+    ]
   });
 
   hasUnitNumber = false;
@@ -43,8 +38,9 @@ export class RegisterFormComponent {
     return this.fb.group({
       name: [null, Validators.required],
       age: null,
+      tShirt: ['none', Validators.required],
+      medal: null,
       isPrivate: null,
-      tShirt: ['none', Validators.required]
     });
   }
 

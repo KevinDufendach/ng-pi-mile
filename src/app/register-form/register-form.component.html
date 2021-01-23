@@ -1,7 +1,7 @@
 <form [formGroup]="registrationForm" novalidate (ngSubmit)="onSubmit()">
   <mat-card class="shipping-card">
     <mat-card-header>
-      <mat-card-title>Register</mat-card-title>
+      <mat-card-title>Registration</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <div class="row">
@@ -45,7 +45,7 @@
         </div>
       </ng-container>
       <div>
-        <button mat-raised-button class="mat-primary" type="button" (click)="addParticipant()">+ Add Participant</button>
+        <button mat-button type="button" (click)="addParticipant()">+ Add Participant</button>
       </div>
       <h2>Address (required for T-Shirt orders and medals)</h2>
       <div class="row">
@@ -100,19 +100,10 @@
           </mat-form-field>
         </div>
       </div>
-      <!-- <div class="row">
-        <div class="col">
-          <mat-radio-group formControlName="shipping">
-            <mat-radio-button value="free">Free Shipping</mat-radio-button>
-            <mat-radio-button value="priority">Priority Shipping</mat-radio-button>
-            <mat-radio-button value="nextday">Next Day Shipping</mat-radio-button>
-          </mat-radio-group>
-        </div>
-      </div> -->
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" type="submit">Submit</button>
     </mat-card-actions>
   </mat-card>
-  <div>{{registrationForm.value | json}}</div>
+  <pre>{{registrationForm.value | json}}</pre>
 </form>
