@@ -37,3 +37,11 @@ $ng-pi-mile-theme: mat-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+// Constants
+@import 'constants';
+
+.basic-padding {
+  padding: $basic-padding;
+}
